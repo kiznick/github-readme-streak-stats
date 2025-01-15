@@ -31,6 +31,12 @@ if (!isset($_REQUEST["user"])) {
     exit();
 }
 
+// check user = kiznick
+if($_REQUEST["user"] != 'kiznick') {
+    renderOutput('This deployment is for kiznick only. \n(if you want to use this take a look at https://github.com/DenverCoder1/github-readme-streak-stats)', 403);
+    exit();
+}
+
 try {
     // get streak stats for user given in query string
     $user = preg_replace("/[^a-zA-Z0-9\-]/", "", $_REQUEST["user"]);
