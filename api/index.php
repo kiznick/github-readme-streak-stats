@@ -33,7 +33,7 @@ if (!isset($_REQUEST["user"])) {
 
 // check user = kiznick
 if($_REQUEST["user"] != 'kiznick') {
-    renderOutput('This deployment is for kiznick only. \n(if you want to use this take a look at https://github.com/DenverCoder1/github-readme-streak-stats)', 403);
+    renderOutput('This deployment is for kiznick only.', 403);
     exit();
 }
 
